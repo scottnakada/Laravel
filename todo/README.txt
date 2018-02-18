@@ -12,13 +12,13 @@ To run this project:
 
 	touch database/database.sqlite
 
-3) Populate the database with empty database tables:
-
-	php artisan migrate:fresh
-
-4) Load the composer dependancies:
+3) Load the composer dependancies:
 
 	composer install
+
+4) Populate the database with empty database tables:
+
+	php artisan migrate:fresh
 
 5) Start the web server:
 
