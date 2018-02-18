@@ -6,3 +6,6 @@ repo contains some sample Laravel projects.
 todo - a simple task list, which demonstrates developing a CRUD
 	interface to (C) Add tasks, (R) display tasks, (U) edit tasks,
 	and (D) delete tasks
+
+products - create a products interface, and can add products/price,
+    list products, edit products, and delete products
