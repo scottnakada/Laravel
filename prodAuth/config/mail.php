@@ -84,7 +84,7 @@ return [
     |
     */
 
-    'username' => env('api:key-0ada1532f9678f9040a3ef93c7aaf116'),
+    'username' => env('MAIL_USERNAME'),
 
     'password' => env('MAIL_PASSWORD'),
 
