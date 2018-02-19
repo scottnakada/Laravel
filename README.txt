@@ -9,3 +9,7 @@ todo - a simple task list, which demonstrates developing a CRUD
 
 products - create a products interface, and can add products/price,
     list products, edit products, and delete products
+
+prodAuth - products interface, with login/user authorization, and
+	routing between views.
+
