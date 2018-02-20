@@ -27,8 +27,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="{{ route('about') }}">About</a></li>
-                        <li><a class="nav-link" href="{{ route('work') }}">Work</a></li>
+                        @guest
+                            <li><a class="nav-link" href="{{ route('work') }}">Work</a></li>
+                            <li><a class="nav-link" href="{{ route('about') }}">About</a></li>
+                        @else
+                            <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                            <li><a class="nav-link" href="{{ route('work') }}">Work</a></li>
+                            <li><a class="nav-link" href="{{ route('about') }}">About</a></li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
