@@ -1,4 +1,4 @@
-<!-- create.blade.php -->
+<!-- welcome.blade.php -->
 
 @extends('layouts.app')
 
