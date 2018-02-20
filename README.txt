@@ -20,3 +20,8 @@ laracom - This is a copy of a cool Laravel e-commerce template.
     It is based on Laravel 5.4; but the composer file loads
     the correct dependencies, and the program works.
 
+boilerplate - This is a copy of a really cool boilerplate for
+    Laravel 5.6.  This project is actively maintained, and
+    appears to be a working example of best practices for
+    using Laravel 5.6.
+
