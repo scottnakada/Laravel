@@ -16,3 +16,7 @@ prodAuth - products interface, with login/user authorization, and
 routing - shows different ways to setup routes, and use them in
     a menu system.
 
+laracom - This is a copy of a cool Laravel e-commerce template.
+    It is based on Laravel 5.4; but the composer file loads
+    the correct dependencies, and the program works.
+
