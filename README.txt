@@ -13,3 +13,6 @@ products - create a products interface, and can add products/price,
 prodAuth - products interface, with login/user authorization, and
 	routing between views.
 
+routing - shows different ways to setup routes, and use them in
+    a menu system.
+
