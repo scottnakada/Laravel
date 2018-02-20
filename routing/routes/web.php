@@ -26,3 +26,24 @@ Route::get('/about', function () {
 Route::get('/work', function () {
     return view('work');
 })->name('work');
+
+Route::group(array('prefix' => 'admin'), function()
+{
+    // main page for the admin section (app/views/admin/dashboard.blade.php)
+    Route::get('/', function()
+    {
+        return View::make('admin.dashboard');
+    })->name('admin');
+
+    // subpage for the posts found at /admin/posts (app/views/admin/posts.blade.php)
+    Route::get('posts', function()
+    {
+        return View::make('admin.posts');
+    })->name('admin.posts');
+
+    // subpage to create a post found at /admin/posts/create (app/views/admin/posts-create.blade.php)
+    Route::get('posts/create', function()
+    {
+        return View::make('admin.posts.create');
+    })->name('admin.posts.create');
+});
