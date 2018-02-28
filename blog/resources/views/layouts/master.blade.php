@@ -36,9 +36,9 @@
         @include ('sidebar.master')
     </div>
 
-</main><!-- /.container -->
+    @include ('layouts.footer')
 
-@include ('layouts.footer')
+</main><!-- /.container -->
 
 </body>
 </html>
