@@ -33,7 +33,6 @@
             </ul>
 
         </div>
-git status
 
         {{-- Add a comment  --}}
 
