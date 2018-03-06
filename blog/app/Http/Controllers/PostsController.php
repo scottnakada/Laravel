@@ -9,6 +9,15 @@ use App\Post;
 class PostsController extends Controller
 {
 
+    public function __construct()
+    {
+
+        // Ensure all accesses to the Posts controller except index and show
+        // are by logged in users
+        $this->middleware('auth')->except(['index', 'show']);
+
+    }
+
     public function index()
     {
 
@@ -75,7 +84,21 @@ class PostsController extends Controller
         /**
          * Method 3
          */
-        Post::create(request(['title', 'body']));
+        //Post::create(request(['title', 'body']));
+
+        /**
+         * Add the user_id field
+         */
+        //Post::create([
+        //    'title' => request('title'),
+        //    'body' => request('body'),
+        //    'user_id' => auth()->id()   // or auth()->user()->id
+        //]);
+
+        // Publish thru function is User
+        auth()->user()->publish(
+            new Post(request(['title', 'body']))
+        );
 
         // And then re-direct to the home page
         return redirect('/');
