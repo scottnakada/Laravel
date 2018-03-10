@@ -29,14 +29,15 @@ class Post extends Model
     {
 
         // Long form
-        //Comment::create([
+        Comment::create([
 
-        //    'body' => $body,
-        //    'post_id' => $this->id
+            'body' => $body,
+            'post_id' => $this->id,
+            'user_id' => auth()->user()->id
 
-        //]);
+        ]);
 
-        $this->comments()->create(compact('body'));
+        // $this->comments()->create(compact('body'));
 
     }
 }

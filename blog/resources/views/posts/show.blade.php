@@ -20,7 +20,8 @@
 
                         <strong>
 
-                            {{ $comment->created_at->diffForHumans() }}: &nbsp;
+                            {{ $comment->created_at->diffForHumans() }} &nbsp
+                            {{ $comment->user->name }}&nbsp says: &nbsp;
 
                         </strong>
 

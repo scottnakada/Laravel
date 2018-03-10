@@ -8,7 +8,7 @@ class Comment extends Model
 {
 
     // List all fields which can be mass assigned
-    protected $fillable = ['post_id', 'body'];
+    protected $fillable = ['post_id', 'body', 'user_id'];
 
     public function post()
     {
