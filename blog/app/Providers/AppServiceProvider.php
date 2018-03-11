@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
     }
 
     /**
@@ -23,6 +23,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
+        // Register the view that is displayed, and the
+        //  function that should be performed when the view is invoked
+        view()->composer('sidebar.archives', function ($view) {
+            // Add to the view, variable archives, from App/Post::archives
+            $view->with('archives', \App\Post::archives());
+        });
+
     }
 }

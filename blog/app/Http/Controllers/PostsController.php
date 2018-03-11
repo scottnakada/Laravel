@@ -26,33 +26,8 @@ class PostsController extends Controller
             ->filter(request(['month', 'year']))
             ->get();
 
-        // Retrieve all the records from the database
-//        $query = Post::latest();
-//
-//        if ($month = request('month')) {
-//
-//            $query->whereMonth('created_at', Carbon::parse($month)->month);
-//
-//        }
-//
-//        if ($year = request('year')) {
-//
-//            $query->whereYear('created_at', $year);
-//
-//        }
-//
-//        $posts = $query->get();
-
-        $archives = Post::selectRaw('year(created_at) year,
-                                     monthname(created_at) month,
-                                     count(*) published')
-            ->groupBy('year', 'month')
-            ->orderByRaw('min(created_at) desc')
-            ->get()
-            ->toArray();
-
         // Go to the posts/index view, passing the posts data
-        return view('posts.index', compact('posts', 'archives'));
+        return view('posts.index', compact('posts'));
 
     }
 
