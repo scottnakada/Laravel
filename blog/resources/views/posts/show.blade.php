@@ -43,11 +43,14 @@
 
             <div class="card-block">
 
-                <form method="POST" action="/posts/{{ $post->id }}/comments">
+                {{-- Only allow adding comments if the user is logged in --}}
+                @if (Auth::check())
 
-                    @csrf
+                    <form method="POST" action="/posts/{{ $post->id }}/comments">
 
-                    <div class="form-group">
+                        @csrf
+
+                        <div class="form-group">
 
                         <textarea name="body" placeholder="Your comment here."
                                   class="form-control" required>
@@ -56,15 +59,31 @@
 
                         </textarea>
 
+                        </div>
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-primary">Add Comment</button>
+
+                        </div>
+
+                    </form>
+
+                @else
+
+                    <div class="container">
+                        <p>
+                            <a href="/login" class="btn btn-primary" role="button">Login</a>
+                            <b>Login to add comments!</b>
+                        </p>
+                        <p>
+                            <a href="/register" class="btn btn-primary" role="button">Register</a>
+                            <b>Register if you don't have an account.</b>
+                        </p>
                     </div>
 
-                    <div class="form-group">
+                @endif
 
-                        <button type="submit" class="btn btn-primary">Add Comment</button>
-
-                    </div>
-
-                </form>
 
             </div>
 

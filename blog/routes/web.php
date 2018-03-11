@@ -23,7 +23,7 @@ Route::post('/posts/{post}/comments', 'CommentsController@store');
 
 Route::get('/register', 'RegistrationController@create');
 
-Route::post('/register', 'RegistrationController@store');
+Route::post('/register', 'RegistrationController@store')->name('register');
 
 Route::get('/login', 'SessionsController@create')->name('login');
 
