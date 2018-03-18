@@ -21,3 +21,17 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+/**
+ * Generate dummy records for posts
+ */
+$factory->define(App\Post::class, function (Faker $faker) {
+    return [
+        'user_id' => function() {
+            /* Create a new user, and return the id of the new user */
+            return factory(App\User::class)->create()->id;
+        },
+        'title' => $faker->sentence,
+        'body' => $faker->paragraph,
+    ];
+});
