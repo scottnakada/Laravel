@@ -36,6 +36,7 @@ class SessionsController extends Controller
         };
 
         // auth()->attempt logs the user in
+        session()->flash('message', 'Welcome ' . auth()->user()->name . "!");
 
         // Redirect to the home page
         return redirect()->home();
@@ -46,6 +47,8 @@ class SessionsController extends Controller
     {
 
         auth()->logout();
+
+        session()->flash('message', 'Goodbye!');
 
         return redirect()->home();
 

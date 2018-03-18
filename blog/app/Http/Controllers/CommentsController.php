@@ -27,6 +27,8 @@ class CommentsController extends Controller
         // Add a comment to a post (Allow post controller to do this
         $post->addComment(request('body'));
 
+        session()->flash('message', 'Your comment has been posted');
+
         return back();
 
     }

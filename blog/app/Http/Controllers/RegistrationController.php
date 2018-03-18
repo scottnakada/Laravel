@@ -21,6 +21,8 @@ class RegistrationController extends Controller
         // Create the user, sign them in, and send an email
         $form->persist();
 
+        session()->flash('message', "Thanks so much for signing up!");
+
         // And then re-direct to the home page
         return redirect()->home();
 
