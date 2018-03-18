@@ -31,5 +31,12 @@ class AppServiceProvider extends ServiceProvider
             $view->with('archives', \App\Post::archives());
         });
 
+        // Register the view that is displayed, and the
+        //  function that should be performed when the view is invoked
+        view()->composer('sidebar.tags', function ($view) {
+            // Add to the view, variable tags
+            $view->with('tags', \App\Tag::has('posts')->pluck('name'));
+        });
+
     }
 }

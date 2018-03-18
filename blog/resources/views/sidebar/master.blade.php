@@ -4,6 +4,8 @@
 
     @include ('sidebar.archives')
 
+    @include ('sidebar.tags')
+
     @include ('sidebar.elsewhere')
 
 </aside><!-- /.blog-sidebar -->
