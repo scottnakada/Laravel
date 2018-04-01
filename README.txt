@@ -25,3 +25,7 @@ boilerplate - This is a copy of a really cool boilerplate for
     appears to be a working example of best practices for
     using Laravel 5.6.
 
+blog - This example creates a blog
+
+laravelGen - This example shows how to generate a quick
+    template using InfyOm Laravel Generator
