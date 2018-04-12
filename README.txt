@@ -29,3 +29,7 @@ blog - This example creates a blog
 
 laravelGen - This example shows how to generate a quick
     template using InfyOm Laravel Generator
+
+crudGen - This example shows how to generate a quick crud
+    interface using InfyOm Laravel Generator (see README.txt file
+    for step by step instructions)
