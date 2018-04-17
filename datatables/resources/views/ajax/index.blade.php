@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('style')
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/b-1.5.1/b-print-1.5.1/cr-1.4.1/r-2.2.1/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-html5-1.5.1/b-print-1.5.1/cr-1.4.1/r-2.2.1/datatables.min.css"/>
 @endsection
 
 @section('content')
@@ -29,7 +29,11 @@
 @endsection
 
 @section('script')
-        <script type="text/javascript" class="init">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-html5-1.5.1/b-print-1.5.1/cr-1.4.1/r-2.2.1/datatables.min.js"></script>
+
+    <script type="text/javascript" class="init">
         $(document).ready(function() {
             $('#example').DataTable({
                 "ajax": "api/ajax/getusers",
@@ -43,7 +47,8 @@
                 "pagingType": "full_numbers",
                 "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
                        "<'row'<'col-sm-12'tr>>" +
-                       "<'row'<'col-sm-4'i><'col-sm-8'p>>"
+                       "<'row'<'col-sm-12'p>>" +
+                       "<'row'<'col-sm-4'i><'col-sm-8'B>>"
             });
         });
     </script>
